@@ -3,17 +3,33 @@ import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import './Dashboard.css';
+import { useState } from 'react';
+import Login from './components/Login';
 
-function Dashboard() {
+
+
+const Dashboard = ({onLogout}) => {
   return (
-    <div className="dashboard">
-      <Sidebar />
-      <div className="dashboard-main">
-        <Header />
-        <MainContent />
+      <div className="dashboard">
+        <Sidebar />
+        <div className="dashboard-main">
+          <Header onLogout={onLogout} />
+          <MainContent />
+        </div>
       </div>
-    </div>
   );
-}
+};
+
+// function Dashboard() {
+//   return (
+//     <div className="dashboard">
+//       <Sidebar />
+//       <div className="dashboard-main">
+//         <Header />
+//         <MainContent />
+//       </div>
+//     </div>
+//   );
+// }
 
 export default Dashboard;
