@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 
-function Header( {onLogout} ) {
+function Header() {
   return (
     <header className="header">
       <div className="header-left">
@@ -9,9 +9,7 @@ function Header( {onLogout} ) {
       </div>
       <div className="header-right">
         <button className="btn">Profile</button>
-        <button className="btn" onClick={onLogout}>
-          Logout
-        </button>
+        <button className="btn">Logout</button>
       </div>
     </header>
   );
