@@ -1,78 +1,84 @@
-.Login0 {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: #bac3d4; /* สีเทาเข้ม */
-}
+/* กล่องครอบ Login (Login1) */
 .Login1 {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
-    background-color: #ededed; /* สีขาว */
-    padding: 40px;
-    box-shadow: 0 4px 8px rgba(118, 48, 48, 0.2); /* เงา */
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 100px;
+  box-shadow: 0 20px 100px rgba(45, 28, 28, 0.2);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  position:absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+/* หัวข้อ (Login2) */
 .Login2 {
-    color: #ffffff;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    border-radius: 15px;
-    background-color: #2d78ea; /* สีขาว */
-    box-shadow: 0 4px 8px rgba(27, 43, 57, 0.2); /* เงา */
-}   
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Form container (Login3) */
 .Login3 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}   
-.Login4 {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    color: #333333; /* สีเทาเข้ม */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.Login5 {
-    display: block;
-    font-size: 14px;        
-    width: 100%;
-    border-radius: 8px; 
-    border: 1px solid #240303; /* สีเทาอ่อน */
-    padding: 10px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+
+/* จัดระเบียบ Label และ Input */
+.Login3 div {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-.Login5:focus {
-    border-color: #1a4068; /* สีฟ้า */
-    outline: none;
-    box-shadow: 0 0 0 1px rgba(49, 67, 87, 0.25); /* เงาเมื่อโฟกัส */
+
+/* Label (Login4, Login6) */
+.Login4, .Login6 {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+  margin-left: 5px;
 }
-.Login6 {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    color: #000000; /* สีเทาเข้ม */
+
+/* Input (Login5, Login7) */
+.Login5, .Login7 {
+  padding: 12px 15px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
 }
-.Login7 {
-    display: block;
-    font-size: 14px;        
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid #000000; /* สีเทาอ่อน */
-    padding: 10px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+
+.Login5:focus, .Login7:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 8px rgba(118, 75, 162, 0.2);
 }
-    .Login8 {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    color: #b64444; /* สีเทาเข้ม */       
-    width: 100%;
-    border-radius: 8px;
-    background-color: #157ae6; /* สีฟ้า */
-    padding: 10px;
-    font-weight: 600;
-    color: #ffffff; /* สีขาว */
-    transition: background-color 0.3s;
-}           
+
+/* ปุ่มกด (Login8) */
+.Login8 {
+  margin-top: 10px;
+  padding: 12px;
+  background: #764ba2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s active;
+}
+
+.Login8:hover {
+  background: #5a377d;
+}
+
+.Login8:active {
+  transform: scale(0.98);
+}

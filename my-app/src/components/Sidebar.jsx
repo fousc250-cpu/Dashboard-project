@@ -4,9 +4,6 @@ import './Sidebar.css';
 function Sidebar() {
   return (
     <div className="sidebar">
-      <div className="sidebar-header">
-        <h2>Dashboard</h2>
-      </div>
       <nav className="sidebar-nav">
         <ul>
           <li><a href="#overview">Overview</a></li>

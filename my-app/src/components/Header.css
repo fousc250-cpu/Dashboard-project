@@ -1,32 +1,39 @@
-.header {
-  background-color: #ecf0f1;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.header-left h1 {
-  margin: 0;
-  color: #2c3e50;
-}
-
 .header-right {
-  display: flex;
-  gap: 10px;
+    text-align: right;
+    margin-bottom: 15px;
 }
 
-.btn {
-  background-color: #3498db;
+.bt1 {
+     background: linear-gradient(135deg, #125997 0%, #1e88e5 100%);
   color: white;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
   border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  box-shadow: 0 4px 14px 0 rgba(18, 89, 151, 0.39);
+  transition: all 0.2s ease;
+  margin-right: 10px;
 }
 
-.btn:hover {
-  background-color: #2980b9;
+.bt1:active {
+  transform: scale(0.95); /* เอฟเฟกต์ตอนกดปุ่มจะยุบลงไปเล็กน้อย */
+}
+
+
+.bt2 {
+    background: linear-gradient(135deg, #125997 0%, #1e88e5 100%);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px 0 rgba(18, 89, 151, 0.39);
+  transition: all 0.2s ease;
+  margin-right: 10px;
+}
+
+.bt2:active {
+  transform: scale(0.95); /* เอฟเฟกต์ตอนกดปุ่มจะยุบลงไปเล็กน้อย */
 }

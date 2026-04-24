@@ -1,18 +1,15 @@
 import React from 'react';
 import './Header.css';
 
-function Header( {onLogout, onProfile} ) {
+function Header( {onLogout, onProfile, sideber} ) {
   return (
     <header className="header">
-      <div className="header-left">
-        <h1>Welcome to Dashboard</h1>
-      </div>
       <div className="header-right">
-        <button className="btn" onClick={onProfile}>
-          Profile
+        <button className="bt1" onClick={onProfile}>
+          <div className="Text1">Profile</div>
         </button>
-        <button className="btn" onClick={onLogout}>
-          Logout
+        <button className="bt2" onClick={onLogout}>
+        <div className= "Text2">Login</div>
         </button>
       </div>
     </header>

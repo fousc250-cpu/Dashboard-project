@@ -12,30 +12,29 @@ import Profile from './components/Profile';
 const Dashboard = ({ onLogout }) => { // นำค่าที่ไม่ได้ใช้ (onProfile, onHomeClick) ออกได้
   const [profile, setProfile] = useState('main');
 
+
   const toggleProfile = () => {
     setProfile(profile === 'main' ? 'profile' : 'main');
   };
 
   return (
     <div className="dashboard">
-      <Sidebar />
-
       <div className="dashboard-main">
         {/* ส่งฟังก์ชันไปให้ Header เพื่อเปลี่ยน State */}
-        <Header 
+        <h1 className='f1'>
+          {profile === 'main' ? 'Dashboard' : 'Profile'}
+        </h1>
+        <Header
           onLogout={onLogout}
-          onProfile={toggleProfile} 
-          // onHomeClick={() => setProfile('main')}
+          onProfile={() => setProfile(prev => prev === 'main' ? 'profile' : 'main')}
+        // sideber={() => setSidebar(!Sidebar)}
+        // profile={profile ==="profile"}
+        // onHomeClick={() => setProfile('main')}
         />
         <main className='kl'>
           {/* เปลี่ยนจาก <Dashboard /> เป็น <MainContent /> */}
-          {profile === "main" ? (
-            <MainContent /> 
-          ) : (
-            <Profile />
-          )}
+          {profile === "main" ? <MainContent /> : <Profile />}
         </main>
-        {/* สำคัญ: เอา <MainContent /> ตรงนี้ออกด้วย เพราะเราใส่ไว้ในเงื่อนไขข้างบนแล้ว */}
       </div>
     </div>
   );
